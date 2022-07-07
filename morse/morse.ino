@@ -23,12 +23,13 @@ void serialPrepare() {
 
 void setup() {
 	serialPrepare();
+	pinMode(LED, OUTPUT);
 }
 
 void playSignal(int len) {
-	pinMode(LED, HIGH);
+	digitalWrite(LED, HIGH);
 	delay(len);
-	pinMode(LED, LOW);
+	digitalWrite(LED, LOW);
 	delay(DOT);
 }
 
